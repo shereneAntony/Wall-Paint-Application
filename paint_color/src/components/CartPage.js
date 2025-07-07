@@ -24,6 +24,7 @@ useEffect(() => {
     try {
       const userRes = await axios.get(`http://localhost:8000/api/user-details/?email=${localUser.email}`);
       const userId = userRes.data.id;
+      setUserId(userId);
 
 
       setUserDetails({
